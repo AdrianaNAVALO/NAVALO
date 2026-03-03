@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+.DS_Store (kopie)
+**/.DS_Store
+
+# Extra folders not part of the website
+Produkty_upravene/
+Popisky/
+
+# Documents
+*.docx
+*.doc
+*.xlsx
+
+# Root-level duplicate files (the real ones are inside css/ and js/ folders)
+/cart.js
+/main.js
+/products.js
+/style.css
+/translations.js
