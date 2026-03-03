@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="nGrad" x1="16.38" y1="15.15" x2="21.54" y2="15.15" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#43b02a"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.813"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="32" height="32" rx="7" fill="#161b22"/>
+  <!-- Letter N with gradient -->
+  <text
+    x="16" y="23"
+    text-anchor="middle"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="900"
+    font-size="22"
+    fill="url(#nGrad)"
+  >N</text>
+</svg>

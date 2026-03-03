@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkty — Navalo</title>
+    <meta name="description" content="Kompletní katalog lisovacích tvarovek Navalo — kolena 90° a 45°, T-kusy, spojky, přechodky. Uhlíková ocel E195, EPDM těsnění, V-profil. Dodání do celé Evropy.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://navalo.eu/products.html">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://navalo.eu/products.html">
+    <meta property="og:title" content="Katalog produktů — Navalo lisovací tvarovky">
+    <meta property="og:description" content="Kompletní nabídka lisovacích tvarovek pro topení. Kolena, T-kusy, spojky, přechodky. EU certifikace, EPDM těsnění.">
+    <meta property="og:image" content="https://navalo.eu/images/adaptor-female-onepiece.png">
+    <meta property="og:locale" content="cs_CZ">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">NAVA<span class="logo-accent">L</span>O</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-t="home">Domů</a></li>
+            <li><a href="products.html" class="active" data-t="products">Produkty</a></li>
+            <li><a href="contact.html" data-t="contact">Kontakt</a></li>
+        </ul>
+        <div class="nav-right">
+            <div class="lang-selector">
+                <button class="lang-btn" onclick="toggleLangMenu()">
+                    <span id="current-flag">🇨🇿</span>
+                </button>
+                <div id="lang-menu" class="lang-menu">
+                    <button onclick="setLang('cz')">🇨🇿 Čeština</button>
+                    <button onclick="setLang('en')">🇬🇧 English</button>
+                    <button onclick="setLang('de')">🇩🇪 Deutsch</button>
+                    <button onclick="setLang('fr')">🇫🇷 Français</button>
+                </div>
+            </div>
+            <div class="cart-icon">
+                <a href="cart.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" onclick="toggleMobileNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+</header>
+
+<main class="products-page">
+    <div class="container">
+        <div class="products-header">
+            <h1 data-t="ourProducts">Naše produkty</h1>
+            <p data-t="professionalQuality">Lisovací tvarovky v profesionální kvalitě</p>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-category="all" data-t="all">Vše</button>
+            <button class="filter-btn" data-category="coudes" data-t="elbows">Kolena</button>
+            <button class="filter-btn" data-category="tes" data-t="tees">T-kusy</button>
+            <button class="filter-btn" data-category="manchons" data-t="couplings">Spojky</button>
+            <button class="filter-btn" data-category="adaptors" data-t="adaptors">Přechodky</button>
+        </div>
+
+        <div id="products-grid" class="products-grid">
+            <!-- Products loaded by JavaScript -->
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <span class="footer-logo">NAVA<span class="logo-accent">L</span>O</span>
+                <p data-t="footerDesc">Specialista na lisovací tvarovky pro topení</p>
+                <p style="margin-top: 0.75rem;"><strong style="color: var(--text-1);">Navalo s.r.o.</strong></p>
+                <p>Radvanická 140/60</p>
+                <p>115 00 Michálkovice, CZ</p>
+                <p class="company-ids">IČO: 25352695 | DIČ: CZ25352695</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-t="contact">Kontakt</h4>
+                <p>Tel: +420 603 41 48 11</p>
+                <p>Email: fh@navalo.eu</p>
+                <p style="margin-top: 0.5rem;">Po – Pá: 8:00 – 17:00</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-t="navLinks">Navigace</h4>
+                <ul>
+                    <li><a href="products.html" data-t="products">Produkty</a></li>
+                                        <li><a href="contact.html" data-t="contact">Kontakt</a></li>
+                    <li><a href="terms.html" data-t="termsLink">Obchodní podmínky</a></li>
+                    <li><a href="privacy.html" data-t="privacyLink">Ochrana osobních údajů</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Navalo s.r.o. &mdash; <span data-t="allRightsReserved">Všechna práva vyhrazena</span></p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/translations.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+<script src="js/cookies.js"></script>
+</body>
+</html>

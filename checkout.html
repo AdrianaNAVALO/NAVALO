@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Objednávka — Navalo</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">NAVA<span class="logo-accent">L</span>O</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-t="home">Domů</a></li>
+            <li><a href="products.html" data-t="products">Produkty</a></li>
+                                <li><a href="contact.html" data-t="contact">Kontakt</a></li>
+                    <li><a href="terms.html" data-t="termsLink">Obchodní podmínky</a></li>
+                    <li><a href="privacy.html" data-t="privacyLink">Ochrana osobních údajů</a></li>
+                </ul>
+        <div class="nav-right">
+            <div class="lang-selector">
+                <button class="lang-btn" onclick="toggleLangMenu()">
+                    <span id="current-flag">🇨🇿</span>
+                </button>
+                <div id="lang-menu" class="lang-menu">
+                    <button onclick="setLang('cz')">🇨🇿 Čeština</button>
+                    <button onclick="setLang('en')">🇬🇧 English</button>
+                    <button onclick="setLang('de')">🇩🇪 Deutsch</button>
+                    <button onclick="setLang('fr')">🇫🇷 Français</button>
+                </div>
+            </div>
+            <div class="cart-icon">
+                <a href="cart.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" onclick="toggleMobileNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+</header>
+
+<main class="checkout-page">
+    <div class="container">
+        <h1 data-t="finalizeOrder">Dokončit objednávku</h1>
+
+        <div class="checkout-container">
+
+            <!-- Form -->
+            <form class="checkout-form" id="checkout-form">
+
+                <!-- Customer type -->
+                <section>
+                    <h2 data-t="customerType">Typ zákazníka</h2>
+                    <div class="form-group">
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="customerType" value="individual" checked>
+                                <span data-t="individual">Fyzická osoba</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="customerType" value="company" onchange="toggleCompanyFields(this)">
+                                <span data-t="company">Firma</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Company fields (hidden by default) -->
+                    <div class="company-fields" id="company-fields" style="display: none;">
+                        <div class="form-group">
+                            <label data-t="companyName">Název firmy</label>
+                            <input type="text" name="companyName">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-t="ico">IČO</label>
+                                <input type="text" name="ico">
+                            </div>
+                            <div class="form-group">
+                                <label data-t="vatNumber">DIČ</label>
+                                <input type="text" name="vatNumber">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Delivery info -->
+                <section>
+                    <h2 data-t="deliveryInfo">Dodací údaje</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-t="firstName">Jméno</label>
+                            <input type="text" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-t="lastName">Příjmení</label>
+                            <input type="text" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-t="email">E-mail</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-t="phone">Telefon</label>
+                            <input type="tel" name="phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label data-t="address">Adresa</label>
+                        <input type="text" name="address" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-t="city">Město</label>
+                            <input type="text" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-t="postalCode">PSČ</label>
+                            <input type="text" name="postalCode" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label data-t="country">Země</label>
+                        <select name="country" id="country">
+                            <!-- Populated by JavaScript -->
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Billing address -->
+                <section>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="differentBilling" onchange="toggleBillingFields(this)">
+                            <span data-t="differentBillingAddress">Jiná fakturační adresa</span>
+                        </label>
+                    </div>
+
+                    <div class="billing-fields" id="billing-fields" style="display: none;">
+                        <h3 data-t="billingAddress">Fakturační adresa</h3>
+                        <div class="form-group">
+                            <label data-t="address">Adresa</label>
+                            <input type="text" name="billingAddress">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-t="billingCity">Město (fakturace)</label>
+                                <input type="text" name="billingCity">
+                            </div>
+                            <div class="form-group">
+                                <label data-t="billingPostalCode">PSČ (fakturace)</label>
+                                <input type="text" name="billingPostalCode">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label data-t="country">Země</label>
+                            <select name="billingCountry" id="billingCountry">
+                                <!-- Populated by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Shipping -->
+                <section>
+                    <h2 data-t="shippingMethod">Způsob dopravy</h2>
+                    <div class="shipping-options" id="shipping-options">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </section>
+
+                <!-- Payment -->
+                <section>
+                    <h2 data-t="paymentMethod">Způsob platby</h2>
+
+                    <!-- Payment method selector -->
+                    <div class="shipping-options" id="payment-options">
+                        <label class="shipping-option selected">
+                            <input type="radio" name="paymentMethod" value="card" checked onchange="selectPaymentMethod(this)">
+                            <div class="shipping-option__info">
+                                <span class="shipping-option__label" data-t="card">Platební karta</span>
+                                <span class="shipping-option__time">Visa, Mastercard</span>
+                            </div>
+                            <span class="shipping-option__price"></span>
+                        </label>
+                        <label class="shipping-option">
+                            <input type="radio" name="paymentMethod" value="bank" onchange="selectPaymentMethod(this)">
+                            <div class="shipping-option__info">
+                                <span class="shipping-option__label" data-t="bankTransfer">Bankovní převod</span>
+                                <span class="shipping-option__time" data-t="bankTransferInfo">Platba po potvrzení objednávky</span>
+                            </div>
+                            <span class="shipping-option__price"></span>
+                        </label>
+                        <label class="shipping-option" id="cod-option" style="display:none;">
+                            <input type="radio" name="paymentMethod" value="cod" onchange="selectPaymentMethod(this)">
+                            <div class="shipping-option__info">
+                                <span class="shipping-option__label" data-t="cod">Dobírka</span>
+                                <span class="shipping-option__time" data-t="codInfo">Platba při převzetí (CZ, SK)</span>
+                            </div>
+                            <span class="shipping-option__price" id="cod-price"></span>
+                        </label>
+                    </div>
+
+                    <!-- Card fields -->
+                    <div id="card-fields" style="margin-top: 1.25rem;">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-t="cardName">Jméno na kartě</label>
+                                <input type="text" name="cardName" autocomplete="cc-name">
+                            </div>
+                            <div class="form-group">
+                                <label data-t="cardNumber">Číslo karty</label>
+                                <input type="text" name="cardNumber" placeholder="•••• •••• •••• ••••" autocomplete="cc-number" maxlength="19">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-t="expiry">Datum expirace</label>
+                                <input type="text" name="expiry" placeholder="MM/RR" autocomplete="cc-exp" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label>CVV</label>
+                                <input type="text" name="cvv" placeholder="•••" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bank transfer info -->
+                    <div id="bank-fields" style="display:none; margin-top: 1.25rem;">
+                        <div class="payment-info-box">
+                            <p data-t="bankTransferDetail">Po odeslání objednávky obdržíte email s platebními údaji.</p>
+                            <div class="bank-detail-row">
+                                <span data-t="accountNumber">Číslo účtu</span>
+                                <strong>XX-XXXXXXXXXX/XXXX</strong>
+                            </div>
+                            <div class="bank-detail-row">
+                                <span data-t="variableSymbol">Variabilní symbol</span>
+                                <strong data-t="variableSymbolInfo">Číslo objednávky (zasláno emailem)</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Terms acceptance -->
+                <div class="checkbox-group" style="margin-bottom: 1rem;">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="acceptTerms" required>
+                        <span data-t-html="agreeToTerms">Souhlasím s <a href="terms.html" target="_blank" style="color:var(--red)">obchodními podmínkami</a> a <a href="privacy.html" target="_blank" style="color:var(--red)">zásadami ochrany osobních údajů</a></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;" data-t="payNow">Zaplatit</button>
+            </form>
+
+            <!-- Order summary -->
+            <aside class="order-summary">
+                <h2 data-t="orderSummary">Shrnutí objednávky</h2>
+
+                <div class="order-items" id="order-items">
+                    <!-- Items loaded by JavaScript -->
+                </div>
+
+                <div class="summary-row">
+                    <span data-t="subtotal">Mezisoučet</span>
+                    <span id="order-subtotal">—</span>
+                </div>
+                <div class="summary-row">
+                    <span id="vat-label">DPH (21%)</span>
+                    <span id="order-vat">—</span>
+                </div>
+                <div class="summary-row">
+                    <span data-t="shipping">Doprava</span>
+                    <span id="order-shipping">—</span>
+                </div>
+                <div class="summary-row" id="cod-row" style="display:none;">
+                    <span data-t="cod">Dobírka</span>
+                    <span id="order-cod">—</span>
+                </div>
+                <div class="summary-row total">
+                    <span data-t="total">Celkem</span>
+                    <span id="order-total">—</span>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <span class="footer-logo">NAVA<span class="logo-accent">L</span>O</span>
+                <p data-t="footerDesc">Specialista na lisovací tvarovky pro topení</p>
+                <p style="margin-top: 0.75rem;"><strong style="color: var(--text-1);">Navalo s.r.o.</strong></p>
+                <p>Radvanická 140/60</p>
+                <p>115 00 Michálkovice, CZ</p>
+                <p class="company-ids">IČO: 25352695 | DIČ: CZ25352695</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-t="contact">Kontakt</h4>
+                <p>Tel: +420 603 41 48 11</p>
+                <p>Email: fh@navalo.eu</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-t="navLinks">Navigace</h4>
+                <ul>
+                    <li><a href="products.html" data-t="products">Produkty</a></li>
+                                        <li><a href="contact.html" data-t="contact">Kontakt</a></li>
+                    <li><a href="terms.html" data-t="termsLink">Obchodní podmínky</a></li>
+                    <li><a href="privacy.html" data-t="privacyLink">Ochrana osobních údajů</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Navalo s.r.o. &mdash; <span data-t="allRightsReserved">Všechna práva vyhrazena</span></p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/translations.js"></script>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/shipping.js"></script>
+<script src="js/email.js"></script>
+<script src="js/main.js"></script>
+<script>
+    // Redirect to cart if empty
+    (function () {
+        const stored = localStorage.getItem('navalo_cart');
+        const cart = stored ? JSON.parse(stored) : [];
+        if (!cart || cart.length === 0) {
+            window.location.replace('cart.html');
+        }
+    })();
+
+    function toggleCompanyFields(radio) {
+        const fields = document.getElementById('company-fields');
+        // Show if any company radio is checked
+        const companyChecked = document.querySelector('input[name="customerType"][value="company"]').checked;
+        fields.style.display = companyChecked ? 'block' : 'none';
+    }
+
+    // Also handle individual radio
+    document.querySelectorAll('input[name="customerType"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+            const fields = document.getElementById('company-fields');
+            fields.style.display = radio.value === 'company' ? 'block' : 'none';
+        });
+    });
+
+    function toggleBillingFields(checkbox) {
+        document.getElementById('billing-fields').style.display = checkbox.checked ? 'block' : 'none';
+    }
+</script>
+<script src="js/cookies.js"></script>
+</body>
+</html>
