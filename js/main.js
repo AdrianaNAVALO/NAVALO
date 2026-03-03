@@ -123,23 +123,6 @@ function initCheckout() {
     // Init payment options
     updatePaymentOptions();
 
-    // Auto-format card inputs
-    const cardNumberInput = document.querySelector('input[name="cardNumber"]');
-    if (cardNumberInput) {
-        cardNumberInput.addEventListener('input', e => {
-            let v = e.target.value.replace(/\D/g, '').substring(0, 16);
-            e.target.value = v.replace(/(.{4})/g, '$1 ').trim();
-        });
-    }
-    const expiryInput = document.querySelector('input[name="expiry"]');
-    if (expiryInput) {
-        expiryInput.addEventListener('input', e => {
-            let v = e.target.value.replace(/\D/g, '').substring(0, 4);
-            if (v.length >= 3) v = v.substring(0, 2) + '/' + v.substring(2);
-            e.target.value = v;
-        });
-    }
-
     // Re-render shipping + payment when country changes
     const countrySelect = document.getElementById('country');
     if (countrySelect) {
@@ -326,17 +309,6 @@ function validateCheckoutForm(formData) {
         if (ico && !/^\d{8}$/.test(ico)) showError('ico', t('errorIco') || 'IČO musí mít 8 číslic');
     }
 
-    // Card fields
-    const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked')?.value || 'card';
-    if (paymentMethod === 'card') {
-        const cardNumber = formData.get('cardNumber')?.replace(/\s/g, '');
-        if (!cardNumber || !/^\d{16}$/.test(cardNumber)) showError('cardNumber', t('errorCardNumber') || 'Zadejte 16místné číslo karty');
-        const expiry = formData.get('expiry')?.trim();
-        if (!expiry || !/^\d{2}\/\d{2}$/.test(expiry)) showError('expiry', t('errorExpiry') || 'Formát: MM/RR');
-        const cvv = formData.get('cvv')?.trim();
-        if (!cvv || !/^\d{3,4}$/.test(cvv)) showError('cvv', t('errorCvv') || 'CVV: 3–4 číslice');
-    }
-
     return valid;
 }
 
@@ -351,8 +323,11 @@ async function handleCheckoutSubmit(e) {
 
     if (!validateCheckoutForm(formData)) return;
 
-    submitBtn.textContent = t('processing');
+    submitBtn.textContent = t('processing') || 'Zpracovávám...';
     submitBtn.disabled = true;
+
+    const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked')?.value || 'card';
+
     const orderData = {
         firstName: formData.get('firstName'),
         lastName: formData.get('lastName'),
@@ -377,35 +352,48 @@ async function handleCheckoutSubmit(e) {
     };
 
     try {
-        await simulatePayment(orderData);
+        if (paymentMethod === 'card') {
+            // Save order data so success.html can send the confirmation email after Stripe redirect
+            localStorage.setItem('navalo_pending_order', JSON.stringify(orderData));
 
-        const orderRef = window.generateOrderReference ? window.generateOrderReference() : 'NAV-' + Date.now();
+            const response = await fetch('/.netlify/functions/create-checkout-session', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    items: window.cart,
+                    shippingCost: window.selectedShipping ?? 0,
+                    customerEmail: orderData.email,
+                    customerName: `${orderData.firstName} ${orderData.lastName}`,
+                }),
+            });
 
-        if (window.sendOrderEmails) {
-            const emailResult = await window.sendOrderEmails(orderData);
-            localStorage.setItem('navalo_last_order_ref', emailResult.orderRef || orderRef);
+            if (!response.ok) throw new Error('Server error: ' + response.status);
+
+            const data = await response.json();
+            if (data.url) {
+                window.location.href = data.url;
+            } else {
+                throw new Error(data.error || 'Stripe redirect failed');
+            }
         } else {
-            localStorage.setItem('navalo_last_order_ref', orderRef);
+            // Bank transfer or COD — send emails directly
+            const orderRef = window.generateOrderReference ? window.generateOrderReference() : 'NAV-' + Date.now();
+
+            if (window.sendOrderEmails) {
+                const emailResult = await window.sendOrderEmails(orderData);
+                localStorage.setItem('navalo_last_order_ref', emailResult.orderRef || orderRef);
+            } else {
+                localStorage.setItem('navalo_last_order_ref', orderRef);
+            }
+
+            localStorage.removeItem('navalo_cart');
+            window.cart = [];
+            window.location.href = 'success.html';
         }
-
-        localStorage.removeItem('navalo_cart');
-        window.cart = [];
-
-        window.location.href = 'success.html';
     } catch (error) {
         console.error('Error:', error);
-        alert('Chyba při zpracování platby. Zkuste to prosím znovu.');
+        alert(t('errorPayment') || 'Chyba při zpracování. Zkuste to prosím znovu.');
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
     }
-}
-
-// Simulate payment (replace with real Stripe integration)
-function simulatePayment(orderData) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            console.log('Order placed:', orderData);
-            resolve({ success: true, orderId: 'ORD-' + Date.now() });
-        }, 2000);
-    });
 }

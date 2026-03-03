@@ -97,12 +97,45 @@
 </footer>
 
 <script src="js/translations.js"></script>
+<script src="js/products.js"></script>
 <script src="js/cart.js"></script>
+<script src="js/shipping.js"></script>
+<script src="js/email.js"></script>
 <script src="js/main.js"></script>
 <script>
-    const orderRef = localStorage.getItem('navalo_last_order_ref') || 'NAV-' + Date.now().toString().slice(-8);
-    document.getElementById('order-number').textContent = orderRef;
-    localStorage.removeItem('navalo_last_order_ref');
+    (async function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionId = urlParams.get('session_id');
+
+        if (sessionId) {
+            // Returning from Stripe payment — send confirmation emails
+            const pendingStr = localStorage.getItem('navalo_pending_order');
+            if (pendingStr) {
+                const orderData = JSON.parse(pendingStr);
+                const fallbackRef = 'NAV-' + Date.now().toString().slice(-8);
+                try {
+                    if (window.sendOrderEmails) {
+                        const result = await window.sendOrderEmails(orderData);
+                        document.getElementById('order-number').textContent = result.orderRef || fallbackRef;
+                    } else {
+                        document.getElementById('order-number').textContent = fallbackRef;
+                    }
+                } catch (e) {
+                    document.getElementById('order-number').textContent = fallbackRef;
+                }
+                localStorage.removeItem('navalo_pending_order');
+                localStorage.removeItem('navalo_cart');
+                if (window.cart) window.cart = [];
+            } else {
+                document.getElementById('order-number').textContent = 'NAV-' + Date.now().toString().slice(-8);
+            }
+        } else {
+            // Bank transfer or COD flow
+            const orderRef = localStorage.getItem('navalo_last_order_ref') || 'NAV-' + Date.now().toString().slice(-8);
+            document.getElementById('order-number').textContent = orderRef;
+            localStorage.removeItem('navalo_last_order_ref');
+        }
+    })();
 </script>
 <script src="js/cookies.js"></script>
 </body>

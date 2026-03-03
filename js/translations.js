@@ -203,7 +203,10 @@ const translations = {
         errorIco: "IČO musí mít 8 číslic",
         errorCardNumber: "Zadejte 16místné číslo karty",
         errorExpiry: "Formát: MM/RR",
-        errorCvv: "CVV: 3–4 číslice"
+        errorCvv: "CVV: 3–4 číslice",
+        stripeRedirectInfo: "Po kliknutí budete bezpečně přesměrováni na platební bránu Stripe, kde zadáte údaje své karty.",
+        securedByStripe: "Zabezpečeno Stripe — Visa, Mastercard",
+        errorPayment: "Chyba při zpracování. Zkuste to prosím znovu."
     },
 
     en: {
@@ -347,7 +350,10 @@ const translations = {
         errorIco: "Company ID must be 8 digits",
         errorCardNumber: "Enter a 16-digit card number",
         errorExpiry: "Format: MM/YY",
-        errorCvv: "CVV: 3–4 digits"
+        errorCvv: "CVV: 3–4 digits",
+        stripeRedirectInfo: "After clicking, you will be securely redirected to the Stripe payment gateway to enter your card details.",
+        securedByStripe: "Secured by Stripe — Visa, Mastercard",
+        errorPayment: "Payment processing error. Please try again."
     },
 
     de: {
@@ -491,7 +497,10 @@ const translations = {
         errorIco: "Unternehmens-ID muss 8 Ziffern haben",
         errorCardNumber: "16-stellige Kartennummer eingeben",
         errorExpiry: "Format: MM/JJ",
-        errorCvv: "CVV: 3–4 Ziffern"
+        errorCvv: "CVV: 3–4 Ziffern",
+        stripeRedirectInfo: "Nach dem Klicken werden Sie sicher zur Stripe-Zahlungsseite weitergeleitet, wo Sie Ihre Kartendaten eingeben.",
+        securedByStripe: "Gesichert durch Stripe — Visa, Mastercard",
+        errorPayment: "Fehler bei der Verarbeitung. Bitte versuchen Sie es erneut."
     },
 
     fr: {
@@ -635,7 +644,10 @@ const translations = {
         errorIco: "L'identifiant d'entreprise doit avoir 8 chiffres",
         errorCardNumber: "Entrez un numéro de carte à 16 chiffres",
         errorExpiry: "Format : MM/AA",
-        errorCvv: "CVV : 3–4 chiffres"
+        errorCvv: "CVV : 3–4 chiffres",
+        stripeRedirectInfo: "Après avoir cliqué, vous serez redirigé en toute sécurité vers la passerelle de paiement Stripe pour saisir vos coordonnées bancaires.",
+        securedByStripe: "Sécurisé par Stripe — Visa, Mastercard",
+        errorPayment: "Erreur de traitement. Veuillez réessayer."
     }
 };
 
