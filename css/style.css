@@ -660,6 +660,8 @@ header {
     border-radius: var(--r-lg);
     overflow: hidden;
     transition: all var(--t);
+    display: flex;
+    flex-direction: column;
 }
 
 .product-card:hover {
@@ -687,7 +689,14 @@ header {
     padding: 12px;
 }
 
-.product-info { padding: 1.25rem; }
+.product-info {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.product-actions { margin-top: auto; }
 
 .product-info h3 {
     font-size: 0.9rem;
