@@ -4,23 +4,23 @@ const products = [
     // ── Kolena 90° FF — 22mm → 28mm ───────────────────────────────────────────
     {
         id: 6,
-        name: { cz: "Lisovací koleno 90° FF", en: "90° Press-fit elbow FF", de: "Pressfitting-Bogen 90° FF", fr: "Coude 90° à sertir FF" },
+        name: { cz: "Lisovací koleno 90°", en: "90° Press-fit elbow", de: "Pressfitting-Bogen 90°", fr: "Coude 90° à sertir" },
         description: {
-            cz: "Lisovací koleno 90° FF, V-profil. Oba konce lisovací — bez závitu. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C. Montáž bez pájení.",
-            en: "90° press-fit elbow FF, V-profile. Both ends press-fit, no thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C. Installation without soldering.",
-            de: "90°-Pressfitting-Bogen FF, V-Profil. Beide Enden als Pressanschluss, kein Gewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
-            fr: "Coude 90° à sertir FF, V-profil. Les deux extrémités à sertir, sans filetage. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
+            cz: "Lisovací koleno 90°, V-profil. Oba konce lisovací — bez závitu. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C. Montáž bez pájení.",
+            en: "90° press-fit elbow, V-profile. Both ends press-fit, no thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C. Installation without soldering.",
+            de: "90°-Pressfitting-Bogen, V-Profil. Beide Enden als Pressanschluss, kein Gewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Coude 90° à sertir, V-profil. Les deux extrémités à sertir, sans filetage. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
         },
         category: "coudes", diameter: "22mm", price: 2.28, image: "images/bend-90.png"
     },
     {
         id: 1,
-        name: { cz: "Lisovací koleno 90° FF", en: "90° Press-fit elbow FF", de: "Pressfitting-Bogen 90° FF", fr: "Coude 90° à sertir FF" },
+        name: { cz: "Lisovací koleno 90°", en: "90° Press-fit elbow", de: "Pressfitting-Bogen 90°", fr: "Coude 90° à sertir" },
         description: {
-            cz: "Lisovací koleno 90° FF, V-profil. Oba konce lisovací — bez závitu. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C. Montáž bez pájení.",
-            en: "90° press-fit elbow FF, V-profile. Both ends press-fit, no thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C. Installation without soldering.",
-            de: "90°-Pressfitting-Bogen FF, V-Profil. Beide Enden als Pressanschluss, kein Gewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
-            fr: "Coude 90° à sertir FF, V-profil. Les deux extrémités à sertir, sans filetage. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
+            cz: "Lisovací koleno 90°, V-profil. Oba konce lisovací — bez závitu. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C. Montáž bez pájení.",
+            en: "90° press-fit elbow, V-profile. Both ends press-fit, no thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C. Installation without soldering.",
+            de: "90°-Pressfitting-Bogen, V-Profil. Beide Enden als Pressanschluss, kein Gewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Coude 90° à sertir, V-profil. Les deux extrémités à sertir, sans filetage. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
         },
         category: "coudes", diameter: "28mm", price: 2.67, image: "images/bend-90.png"
     },
@@ -28,7 +28,7 @@ const products = [
     // ── Kolena 90° MF — 22mm → 28mm ───────────────────────────────────────────
     {
         id: 7,
-        name: { cz: "Lisovací koleno 90° MF", en: "90° Press-fit elbow MF", de: "Pressfitting-Bogen 90° MF", fr: "Coude 90° à sertir MF" },
+        name: { cz: "Lisovací koleno 90° se závitem", en: "90° Press-fit elbow with thread", de: "Pressfitting-Bogen 90° mit Gewinde", fr: "Coude 90° à sertir avec filetage" },
         description: {
             cz: "Lisovací koleno 90° MF, V-profil. Jeden lisovací spoj + vnější závit. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
             en: "90° press-fit elbow MF, V-profile. One press connection + male thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
@@ -39,7 +39,7 @@ const products = [
     },
     {
         id: 2,
-        name: { cz: "Lisovací koleno 90° MF", en: "90° Press-fit elbow MF", de: "Pressfitting-Bogen 90° MF", fr: "Coude 90° à sertir MF" },
+        name: { cz: "Lisovací koleno 90° se závitem", en: "90° Press-fit elbow with thread", de: "Pressfitting-Bogen 90° mit Gewinde", fr: "Coude 90° à sertir avec filetage" },
         description: {
             cz: "Lisovací koleno 90° MF, V-profil. Jeden lisovací spoj + vnější závit. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
             en: "90° press-fit elbow MF, V-profile. One press connection + male thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
@@ -52,7 +52,7 @@ const products = [
     // ── Kolena 45° FF — 22mm → 28mm ───────────────────────────────────────────
     {
         id: 8,
-        name: { cz: "Lisovací koleno 45° FF", en: "45° Press-fit elbow FF", de: "Pressfitting-Bogen 45° FF", fr: "Coude 45° à sertir FF" },
+        name: { cz: "Lisovací koleno 45°", en: "45° Press-fit elbow", de: "Pressfitting-Bogen 45°", fr: "Coude 45° à sertir" },
         description: {
             cz: "Lisovací koleno 45° FF, V-profil. Oba konce lisovací — bez závitu. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
             en: "45° press-fit elbow FF, V-profile. Both ends press-fit, no thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
@@ -63,7 +63,7 @@ const products = [
     },
     {
         id: 3,
-        name: { cz: "Lisovací koleno 45° FF", en: "45° Press-fit elbow FF", de: "Pressfitting-Bogen 45° FF", fr: "Coude 45° à sertir FF" },
+        name: { cz: "Lisovací koleno 45°", en: "45° Press-fit elbow", de: "Pressfitting-Bogen 45°", fr: "Coude 45° à sertir" },
         description: {
             cz: "Lisovací koleno 45° FF, V-profil. Oba konce lisovací — bez závitu. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
             en: "45° press-fit elbow FF, V-profile. Both ends press-fit, no thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
@@ -76,7 +76,7 @@ const products = [
     // ── Kolena 45° MF — 22mm → 28mm ───────────────────────────────────────────
     {
         id: 9,
-        name: { cz: "Lisovací koleno 45° MF", en: "45° Press-fit elbow MF", de: "Pressfitting-Bogen 45° MF", fr: "Coude 45° à sertir MF" },
+        name: { cz: "Lisovací koleno 45° se závitem", en: "45° Press-fit elbow with thread", de: "Pressfitting-Bogen 45° mit Gewinde", fr: "Coude 45° à sertir avec filetage" },
         description: {
             cz: "Lisovací koleno 45° MF, V-profil. Jeden lisovací spoj + vnější závit. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
             en: "45° press-fit elbow MF, V-profile. One press connection + male thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
@@ -87,7 +87,7 @@ const products = [
     },
     {
         id: 4,
-        name: { cz: "Lisovací koleno 45° MF", en: "45° Press-fit elbow MF", de: "Pressfitting-Bogen 45° MF", fr: "Coude 45° à sertir MF" },
+        name: { cz: "Lisovací koleno 45° se závitem", en: "45° Press-fit elbow with thread", de: "Pressfitting-Bogen 45° mit Gewinde", fr: "Coude 45° à sertir avec filetage" },
         description: {
             cz: "Lisovací koleno 45° MF, V-profil. Jeden lisovací spoj + vnější závit. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
             en: "45° press-fit elbow MF, V-profile. One press connection + male thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
