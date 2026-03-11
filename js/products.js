@@ -1,231 +1,225 @@
 // Product data
 const products = [
-    // ── Coudes / Kolena / Bögen / Elbows ─────────────────────────────────────
+
+    // ── Kolena 28mm / Elbows 28mm ─────────────────────────────────────────────
     {
         id: 1,
-        name: { cz: "Lisovací koleno 90°", en: "90° Press-fit bend", de: "Pressfitting-Bogen 90°", fr: "Coude 90° à sertir" },
+        name: { cz: "Lisovací koleno 90° FF", en: "90° Press-fit elbow FF", de: "Pressfitting-Bogen 90° FF", fr: "Coude 90° à sertir FF" },
         description: {
-            cz: "Lisovací koleno 90°, V-profil. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek (LBP nebo klasický), pracovní teplota -10 °C až +110 °C. Montáž bez pájení nebo závitování.",
-            en: "90° press-fit elbow, V-profile. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring (LBP or traditional), working temperature -10°C to +110°C. Installation without soldering or threading.",
-            de: "90°-Pressfitting-Bogen, V-Profil. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring (LBP oder klassisch), Betriebstemperatur -10 °C bis +110 °C. Montage ohne Löten oder Gewindeschneiden.",
-            fr: "Coude 90° à sertir, V-profil. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM (LBP ou classique), température de service -10°C à +110°C. Montage sans soudure ni filetage."
+            cz: "Lisovací koleno 90° FF, V-profil. Oba konce lisovací — bez závitu. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C. Montáž bez pájení.",
+            en: "90° press-fit elbow FF, V-profile. Both ends press-fit, no thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C. Installation without soldering.",
+            de: "90°-Pressfitting-Bogen FF, V-Profil. Beide Enden als Pressanschluss, kein Gewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Coude 90° à sertir FF, V-profil. Les deux extrémités à sertir, sans filetage. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
         },
-        category: "coudes", diameter: "16mm", price: 4.50, image: "images/bend-90.png"
+        category: "coudes", diameter: "28mm", price: 2.67, image: "images/bend-90.png"
     },
     {
         id: 2,
-        name: { cz: "Lisovací koleno 90°", en: "90° Press-fit bend", de: "Pressfitting-Bogen 90°", fr: "Coude 90° à sertir" },
+        name: { cz: "Lisovací koleno 90° MF", en: "90° Press-fit elbow MF", de: "Pressfitting-Bogen 90° MF", fr: "Coude 90° à sertir MF" },
         description: {
-            cz: "Lisovací koleno 90°, V-profil. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek (LBP nebo klasický), pracovní teplota -10 °C až +110 °C. Montáž bez pájení nebo závitování.",
-            en: "90° press-fit elbow, V-profile. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring (LBP or traditional), working temperature -10°C to +110°C. Installation without soldering or threading.",
-            de: "90°-Pressfitting-Bogen, V-Profil. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring (LBP oder klassisch), Betriebstemperatur -10 °C bis +110 °C. Montage ohne Löten oder Gewindeschneiden.",
-            fr: "Coude 90° à sertir, V-profil. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM (LBP ou classique), température de service -10°C à +110°C. Montage sans soudure ni filetage."
+            cz: "Lisovací koleno 90° MF, V-profil. Jeden lisovací spoj + vnější závit. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
+            en: "90° press-fit elbow MF, V-profile. One press connection + male thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
+            de: "90°-Pressfitting-Bogen MF, V-Profil. Ein Pressanschluss + Außengewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Coude 90° à sertir MF, V-profil. Un raccord à sertir + filetage mâle. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
         },
-        category: "coudes", diameter: "20mm", price: 5.80, image: "images/bend-90.png"
+        category: "coudes", diameter: "28mm", price: 2.67, image: "images/bend-90.png"
     },
     {
         id: 3,
-        name: { cz: "Lisovací koleno 90°", en: "90° Press-fit bend", de: "Pressfitting-Bogen 90°", fr: "Coude 90° à sertir" },
+        name: { cz: "Lisovací koleno 45° FF", en: "45° Press-fit elbow FF", de: "Pressfitting-Bogen 45° FF", fr: "Coude 45° à sertir FF" },
         description: {
-            cz: "Lisovací koleno 90°, V-profil. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek (LBP nebo klasický), pracovní teplota -10 °C až +110 °C. Montáž bez pájení nebo závitování.",
-            en: "90° press-fit elbow, V-profile. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring (LBP or traditional), working temperature -10°C to +110°C. Installation without soldering or threading.",
-            de: "90°-Pressfitting-Bogen, V-Profil. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring (LBP oder klassisch), Betriebstemperatur -10 °C bis +110 °C. Montage ohne Löten oder Gewindeschneiden.",
-            fr: "Coude 90° à sertir, V-profil. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM (LBP ou classique), température de service -10°C à +110°C. Montage sans soudure ni filetage."
+            cz: "Lisovací koleno 45° FF, V-profil. Oba konce lisovací — bez závitu. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
+            en: "45° press-fit elbow FF, V-profile. Both ends press-fit, no thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
+            de: "45°-Pressfitting-Bogen FF, V-Profil. Beide Enden als Pressanschluss, kein Gewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Coude 45° à sertir FF, V-profil. Les deux extrémités à sertir, sans filetage. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
         },
-        category: "coudes", diameter: "26mm", price: 7.90, image: "images/bend-90.png"
+        category: "coudes", diameter: "28mm", price: 2.65, image: null
     },
     {
         id: 4,
-        name: { cz: "Lisovací koleno 90° s hladkým koncem", en: "90° Press-fit bend with plain end", de: "Pressfitting-Bogen 90° mit Steckende", fr: "Coude 90° à sertir avec sortie lisse" },
+        name: { cz: "Lisovací koleno 45° MF", en: "45° Press-fit elbow MF", de: "Pressfitting-Bogen 45° MF", fr: "Coude 45° à sertir MF" },
         description: {
-            cz: "Lisovací koleno 90° s hladkým koncem, V-profil. Jeden lisovací spoj + hladký konec pro napojení na potrubí nebo komponenty bez závitu. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
-            en: "90° press-fit elbow with plain end, V-profile. One press connection + plain end for connecting to pipe or components without thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
-            de: "90°-Pressfitting-Bogen mit Steckende, V-Profil. Eine Pressverbindung + glattes Steckende für den Anschluss an Rohre oder Komponenten ohne Gewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
-            fr: "Coude 90° à sertir avec sortie lisse, V-profil. Un raccord à sertir + sortie lisse pour le raccordement à des tubes ou composants sans filetage. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
+            cz: "Lisovací koleno 45° MF, V-profil. Jeden lisovací spoj + vnější závit. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
+            en: "45° press-fit elbow MF, V-profile. One press connection + male thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
+            de: "45°-Pressfitting-Bogen MF, V-Profil. Ein Pressanschluss + Außengewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Coude 45° à sertir MF, V-profil. Un raccord à sertir + filetage mâle. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
         },
-        category: "coudes", diameter: "16mm", price: 4.20, image: "images/bend-90-plain.png"
+        category: "coudes", diameter: "28mm", price: 2.65, image: null
     },
     {
         id: 5,
-        name: { cz: "Lisovací koleno 90° s hladkým koncem", en: "90° Press-fit bend with plain end", de: "Pressfitting-Bogen 90° mit Steckende", fr: "Coude 90° à sertir avec sortie lisse" },
+        name: { cz: "Lisovací esovité koleno", en: "Press-fit S-bend", de: "Pressfitting-S-Bogen", fr: "Raccord dos d'âne à sertir" },
         description: {
-            cz: "Lisovací koleno 90° s hladkým koncem, V-profil. Jeden lisovací spoj + hladký konec pro napojení na potrubí nebo komponenty bez závitu. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
-            en: "90° press-fit elbow with plain end, V-profile. One press connection + plain end for connecting to pipe or components without thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
-            de: "90°-Pressfitting-Bogen mit Steckende, V-Profil. Eine Pressverbindung + glattes Steckende für den Anschluss an Rohre oder Komponenten ohne Gewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
-            fr: "Coude 90° à sertir avec sortie lisse, V-profil. Un raccord à sertir + sortie lisse pour le raccordement à des tubes ou composants sans filetage. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
+            cz: "Lisovací esovité koleno (dos d'âne), V-profil. Pro přemostění souběžných potrubních tras — oba konce lisovací. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. EPDM O-kroužek, -10 °C až +110 °C.",
+            en: "Press-fit S-bend (dos d'âne), V-profile. For bridging parallel pipe runs — both ends press-fit. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. EPDM O-ring, -10°C to +110°C.",
+            de: "Pressfitting-S-Bogen (Dos d'âne), V-Profil. Für die Überbrückung paralleler Rohrleitungen — beide Enden Pressanschluss. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Raccord dos d'âne à sertir, V-profil. Pour le croisement de canalisations parallèles — les deux extrémités à sertir. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. O-ring EPDM, -10°C à +110°C."
         },
-        category: "coudes", diameter: "20mm", price: 5.50, image: "images/bend-90-plain.png"
+        category: "coudes", diameter: "28mm", price: 3.68, image: null
     },
 
-    // ── Tés / T-kusy / T-Stücke / T-pieces ───────────────────────────────────
+    // ── Kolena 22mm / Elbows 22mm ─────────────────────────────────────────────
     {
         id: 6,
-        name: { cz: "Rovný T-kus lisovací", en: "Equal press-fit T-piece", de: "Gleich-T-Stück Pressfitting", fr: "Té égal à sertir" },
+        name: { cz: "Lisovací koleno 90° FF", en: "90° Press-fit elbow FF", de: "Pressfitting-Bogen 90° FF", fr: "Coude 90° à sertir FF" },
         description: {
-            cz: "Rovný T-kus lisovací, V-profil. Tři lisovací spoje stejného průměru pro větvení potrubí. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek (LBP nebo klasický), -10 °C až +110 °C. Montáž bez pájení.",
-            en: "Equal press-fit T-piece, V-profile. Three press connections of the same diameter for branching pipe runs. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring (LBP or traditional), -10°C to +110°C. Installation without soldering.",
-            de: "Gleich-Pressfitting-T-Stück, V-Profil. Drei Pressverbindungen gleichen Durchmessers für Rohrleitungsabzweigungen. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring (LBP oder klassisch), -10 °C bis +110 °C. Montage ohne Löten.",
-            fr: "Té égal à sertir, V-profil. Trois raccords du même diamètre pour les branchements. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM (LBP ou classique), -10°C à +110°C. Montage sans soudure."
+            cz: "Lisovací koleno 90° FF, V-profil. Oba konce lisovací — bez závitu. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C. Montáž bez pájení.",
+            en: "90° press-fit elbow FF, V-profile. Both ends press-fit, no thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
+            de: "90°-Pressfitting-Bogen FF, V-Profil. Beide Enden als Pressanschluss, kein Gewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Coude 90° à sertir FF, V-profil. Les deux extrémités à sertir, sans filetage. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
         },
-        category: "tes", diameter: "16mm", price: 6.90, image: "images/t-equal.png"
+        category: "coudes", diameter: "22mm", price: 2.28, image: "images/bend-90.png"
     },
     {
         id: 7,
-        name: { cz: "Rovný T-kus lisovací", en: "Equal press-fit T-piece", de: "Gleich-T-Stück Pressfitting", fr: "Té égal à sertir" },
+        name: { cz: "Lisovací koleno 90° MF", en: "90° Press-fit elbow MF", de: "Pressfitting-Bogen 90° MF", fr: "Coude 90° à sertir MF" },
         description: {
-            cz: "Rovný T-kus lisovací, V-profil. Tři lisovací spoje stejného průměru pro větvení potrubí. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek (LBP nebo klasický), -10 °C až +110 °C. Montáž bez pájení.",
-            en: "Equal press-fit T-piece, V-profile. Three press connections of the same diameter for branching pipe runs. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring (LBP or traditional), -10°C to +110°C. Installation without soldering.",
-            de: "Gleich-Pressfitting-T-Stück, V-Profil. Drei Pressverbindungen gleichen Durchmessers für Rohrleitungsabzweigungen. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring (LBP oder klassisch), -10 °C bis +110 °C. Montage ohne Löten.",
-            fr: "Té égal à sertir, V-profil. Trois raccords du même diamètre pour les branchements. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM (LBP ou classique), -10°C à +110°C. Montage sans soudure."
+            cz: "Lisovací koleno 90° MF, V-profil. Jeden lisovací spoj + vnější závit. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
+            en: "90° press-fit elbow MF, V-profile. One press connection + male thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
+            de: "90°-Pressfitting-Bogen MF, V-Profil. Ein Pressanschluss + Außengewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Coude 90° à sertir MF, V-profil. Un raccord à sertir + filetage mâle. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
         },
-        category: "tes", diameter: "20mm", price: 8.50, image: "images/t-equal.png"
+        category: "coudes", diameter: "22mm", price: 2.28, image: "images/bend-90.png"
     },
     {
         id: 8,
-        name: { cz: "Rovný T-kus lisovací", en: "Equal press-fit T-piece", de: "Gleich-T-Stück Pressfitting", fr: "Té égal à sertir" },
+        name: { cz: "Lisovací koleno 45° FF", en: "45° Press-fit elbow FF", de: "Pressfitting-Bogen 45° FF", fr: "Coude 45° à sertir FF" },
         description: {
-            cz: "Rovný T-kus lisovací, V-profil. Tři lisovací spoje stejného průměru pro větvení potrubí. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek (LBP nebo klasický), -10 °C až +110 °C. Montáž bez pájení.",
-            en: "Equal press-fit T-piece, V-profile. Three press connections of the same diameter for branching pipe runs. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring (LBP or traditional), -10°C to +110°C. Installation without soldering.",
-            de: "Gleich-Pressfitting-T-Stück, V-Profil. Drei Pressverbindungen gleichen Durchmessers für Rohrleitungsabzweigungen. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring (LBP oder klassisch), -10 °C bis +110 °C. Montage ohne Löten.",
-            fr: "Té égal à sertir, V-profil. Trois raccords du même diamètre pour les branchements. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM (LBP ou classique), -10°C à +110°C. Montage sans soudure."
+            cz: "Lisovací koleno 45° FF, V-profil. Oba konce lisovací — bez závitu. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
+            en: "45° press-fit elbow FF, V-profile. Both ends press-fit, no thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
+            de: "45°-Pressfitting-Bogen FF, V-Profil. Beide Enden als Pressanschluss, kein Gewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Coude 45° à sertir FF, V-profil. Les deux extrémités à sertir, sans filetage. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
         },
-        category: "tes", diameter: "26mm", price: 11.20, image: "images/t-equal.png"
+        category: "coudes", diameter: "22mm", price: 2.18, image: null
     },
     {
         id: 9,
-        name: { cz: "Redukční T-kus lisovací", en: "Reducing press-fit T-piece", de: "Reduzier-T-Stück Pressfitting", fr: "Té réduit à sertir" },
+        name: { cz: "Lisovací koleno 45° MF", en: "45° Press-fit elbow MF", de: "Pressfitting-Bogen 45° MF", fr: "Coude 45° à sertir MF" },
         description: {
-            cz: "Redukční T-kus lisovací, V-profil. Průchozí větev a odbočka různých průměrů — pro propojení dvou okruhů různých dimenzí. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
-            en: "Reducing press-fit T-piece, V-profile. Main run and branch of different diameters — for connecting two circuits of different sizes. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
-            de: "Reduzier-Pressfitting-T-Stück, V-Profil. Durchgangsstrecke und Abzweig mit unterschiedlichen Durchmessern — für den Anschluss zweier Kreisläufe verschiedener Dimensionen. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
-            fr: "Té réduit à sertir, V-profil. Conduite principale et branchement de diamètres différents — pour relier deux circuits de dimensions différentes. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
+            cz: "Lisovací koleno 45° MF, V-profil. Jeden lisovací spoj + vnější závit. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
+            en: "45° press-fit elbow MF, V-profile. One press connection + male thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
+            de: "45°-Pressfitting-Bogen MF, V-Profil. Ein Pressanschluss + Außengewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Coude 45° à sertir MF, V-profil. Un raccord à sertir + filetage mâle. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
         },
-        category: "tes", diameter: "20×16×20mm", price: 9.90, image: "images/t-reducing.png"
-    },
-    {
-        id: 10,
-        name: { cz: "Redukční T-kus lisovací", en: "Reducing press-fit T-piece", de: "Reduzier-T-Stück Pressfitting", fr: "Té réduit à sertir" },
-        description: {
-            cz: "Redukční T-kus lisovací, V-profil. Průchozí větev a odbočka různých průměrů — pro propojení dvou okruhů různých dimenzí. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek, -10 °C až +110 °C.",
-            en: "Reducing press-fit T-piece, V-profile. Main run and branch of different diameters — for connecting two circuits of different sizes. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring, -10°C to +110°C.",
-            de: "Reduzier-Pressfitting-T-Stück, V-Profil. Durchgangsstrecke und Abzweig mit unterschiedlichen Durchmessern — für den Anschluss zweier Kreisläufe verschiedener Dimensionen. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring, -10 °C bis +110 °C.",
-            fr: "Té réduit à sertir, V-profil. Conduite principale et branchement de diamètres différents — pour relier deux circuits de dimensions différentes. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM, -10°C à +110°C."
-        },
-        category: "tes", diameter: "26×20×26mm", price: 12.50, image: "images/t-reducing.png"
-    },
-    {
-        id: 19,
-        name: { cz: "T-kus lisovací s vnitřním závitem", en: "Press-fit T-piece with female thread", de: "T-Stück Pressfitting mit Innengewinde", fr: "Té à sertir avec sortie femelle" },
-        description: {
-            cz: "T-kus lisovací s vnitřním závitem, V-profil. Dva lisovací spoje + vnitřní závitový vývod (G 1/2\"). Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Pro přímé napojení závitových armatur nebo měřidel. EPDM O-kroužek, -10 °C až +110 °C.",
-            en: "Press-fit T-piece with female thread, V-profile. Two press connections + female-threaded outlet (G 1/2\"). Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. For direct connection of threaded valves or instruments. EPDM O-ring, -10°C to +110°C.",
-            de: "Pressfitting-T-Stück mit Innengewinde, V-Profil. Zwei Pressverbindungen + Innengewinde-Abzweig (G 1/2\"). Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Für direkten Anschluss von Gewinde-Armaturen oder Messgeräten. EPDM-O-Ring, -10 °C bis +110 °C.",
-            fr: "Té à sertir avec filetage femelle, V-profil. Deux raccords + sortie filetée femelle (G 1/2\"). Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Pour connexion directe de vannes filetées ou instruments. O-ring EPDM, -10°C à +110°C."
-        },
-        category: "tes", diameter: "20mm × 1/2\"", price: 13.90, image: "images/t-female-thread.png"
-    },
-    {
-        id: 20,
-        name: { cz: "T-kus lisovací s vnějším závitem", en: "Press-fit T-piece with male thread", de: "T-Stück Pressfitting mit Außengewinde", fr: "Té à sertir avec sortie mâle" },
-        description: {
-            cz: "T-kus lisovací s vnějším závitem, V-profil. Dva lisovací spoje + vnější závitový vývod (G 1/2\"). Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Pro přímé napojení na závitová hrdla kotlů nebo rozdělovačů. EPDM O-kroužek, -10 °C až +110 °C.",
-            en: "Press-fit T-piece with male thread, V-profile. Two press connections + male-threaded outlet (G 1/2\"). Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. For direct connection to threaded boiler or manifold outlets. EPDM O-ring, -10°C to +110°C.",
-            de: "Pressfitting-T-Stück mit Außengewinde, V-Profil. Zwei Pressverbindungen + Außengewinde-Abzweig (G 1/2\"). Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Für direkten Anschluss an Gewindestutzen von Kesseln oder Verteilern. EPDM-O-Ring, -10 °C bis +110 °C.",
-            fr: "Té à sertir avec filetage mâle, V-profil. Deux raccords + sortie filetée mâle (G 1/2\"). Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Pour connexion directe aux raccords filetés de chaudières ou collecteurs. O-ring EPDM, -10°C à +110°C."
-        },
-        category: "tes", diameter: "20mm × 1/2\"", price: 13.90, image: "images/t-male-thread.png"
+        category: "coudes", diameter: "22mm", price: 2.18, image: null
     },
 
-    // ── Manchons / Spojky / Muffen / Couplings ────────────────────────────────
+    // ── Manchons / Spojky ─────────────────────────────────────────────────────
+    {
+        id: 10,
+        name: { cz: "Lisovací posuvná spojka", en: "Press-fit sliding sleeve", de: "Pressfitting-Schiebemuffe", fr: "Manchon coulissant à sertir" },
+        description: {
+            cz: "Lisovací posuvná spojka (manchon coulissant), V-profil. Umožňuje podélný posun pro snadnou montáž v náročných podmínkách. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. EPDM O-kroužek, -10 °C až +110 °C.",
+            en: "Press-fit sliding sleeve (manchon coulissant), V-profile. Allows longitudinal movement for easy installation in tight spaces. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. EPDM O-ring, -10°C to +110°C.",
+            de: "Pressfitting-Schiebemuffe, V-Profil. Ermöglicht Längsverschiebung für einfache Montage unter schwierigen Bedingungen. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Manchon coulissant à sertir, V-profil. Permet un déplacement longitudinal pour faciliter la pose dans des espaces difficiles. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. O-ring EPDM, -10°C à +110°C."
+        },
+        category: "manchons", diameter: "28mm", price: 2.44, image: "images/coupling.png"
+    },
+
+    // ── T-kusy / Tees ─────────────────────────────────────────────────────────
     {
         id: 11,
-        name: { cz: "Lisovací spojka", en: "Press-fit coupling", de: "Pressfitting-Muffe", fr: "Manchon à sertir" },
+        name: { cz: "Lisovací T-kus rovný", en: "Press-fit equal tee", de: "Pressfitting-T-Stück gleich", fr: "Té égal à sertir" },
         description: {
-            cz: "Přímá lisovací spojka, V-profil. Dva lisovací spoje pro přímé spojení dvou trubek. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek (LBP nebo klasický), -10 °C až +110 °C. Montáž bez pájení.",
-            en: "Straight press-fit coupling, V-profile. Two press connections for directly joining two pipes. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring (LBP or traditional), -10°C to +110°C. Installation without soldering.",
-            de: "Gerade Pressfitting-Muffe, V-Profil. Zwei Pressverbindungen zum direkten Verbinden zweier Rohre. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring (LBP oder klassisch), -10 °C bis +110 °C. Montage ohne Löten.",
-            fr: "Manchon droit à sertir, V-profil. Deux raccords pour assembler directement deux tuyaux. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM (LBP ou classique), -10°C à +110°C. Montage sans soudure."
+            cz: "Rovný lisovací T-kus, V-profil. Tři lisovací spoje stejného průměru pro větvení potrubí. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. EPDM O-kroužek, -10 °C až +110 °C.",
+            en: "Press-fit equal tee, V-profile. Three press connections of the same diameter for branching. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. EPDM O-ring, -10°C to +110°C.",
+            de: "Pressfitting-T-Stück gleich, V-Profil. Drei Pressanschlüsse gleichen Durchmessers für Rohrleitungsabzweigungen. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Té égal à sertir, V-profil. Trois raccords du même diamètre pour les branchements. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. O-ring EPDM, -10°C à +110°C."
         },
-        category: "manchons", diameter: "22mm", price: 3.20, image: "images/coupling.png"
+        category: "tes", diameter: "28mm", price: 3.39, image: "images/t-equal.png"
     },
     {
         id: 12,
-        name: { cz: "Lisovací spojka", en: "Press-fit coupling", de: "Pressfitting-Muffe", fr: "Manchon à sertir" },
+        name: { cz: "Lisovací T-kus redukovaný 28×15×28", en: "Press-fit reducing tee 28×15×28", de: "Pressfitting-Reduzierteil T-Stück 28×15×28", fr: "Té réduit 28×15×28 à sertir" },
         description: {
-            cz: "Přímá lisovací spojka, V-profil. Dva lisovací spoje pro přímé spojení dvou trubek. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek (LBP nebo klasický), -10 °C až +110 °C. Montáž bez pájení.",
-            en: "Straight press-fit coupling, V-profile. Two press connections for directly joining two pipes. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring (LBP or traditional), -10°C to +110°C. Installation without soldering.",
-            de: "Gerade Pressfitting-Muffe, V-Profil. Zwei Pressverbindungen zum direkten Verbinden zweier Rohre. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring (LBP oder klassisch), -10 °C bis +110 °C. Montage ohne Löten.",
-            fr: "Manchon droit à sertir, V-profil. Deux raccords pour assembler directement deux tuyaux. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM (LBP ou classique), -10°C à +110°C. Montage sans soudure."
+            cz: "Redukovaný lisovací T-kus 28×15×28, V-profil. Průchozí větev 28 mm + redukovaná odbočka 15 mm. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. EPDM O-kroužek, -10 °C až +110 °C.",
+            en: "Press-fit reducing tee 28×15×28, V-profile. 28mm main run + 15mm reduced branch. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. EPDM O-ring, -10°C to +110°C.",
+            de: "Pressfitting-Reduzierteil T-Stück 28×15×28, V-Profil. 28-mm-Durchgang + 15-mm-Reduzierabzweig. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Té réduit 28×15×28 à sertir, V-profil. Passage principal 28 mm + branchement réduit 15 mm. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. O-ring EPDM, -10°C à +110°C."
         },
-        category: "manchons", diameter: "28mm", price: 4.10, image: "images/coupling.png"
+        category: "tes", diameter: "28×15×28mm", price: 2.81, image: "images/t-reducing.png"
     },
     {
         id: 13,
-        name: { cz: "Lisovací spojka", en: "Press-fit coupling", de: "Pressfitting-Muffe", fr: "Manchon à sertir" },
+        name: { cz: "Lisovací T-kus 28×1/2×28", en: "Press-fit tee 28×1/2×28", de: "Pressfitting-T-Stück 28×1/2×28", fr: "Té 28×1/2×28 à sertir" },
         description: {
-            cz: "Přímá lisovací spojka, V-profil. Dva lisovací spoje pro přímé spojení dvou trubek. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek (LBP nebo klasický), -10 °C až +110 °C. Montáž bez pájení.",
-            en: "Straight press-fit coupling, V-profile. Two press connections for directly joining two pipes. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring (LBP or traditional), -10°C to +110°C. Installation without soldering.",
-            de: "Gerade Pressfitting-Muffe, V-Profil. Zwei Pressverbindungen zum direkten Verbinden zweier Rohre. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring (LBP oder klassisch), -10 °C bis +110 °C. Montage ohne Löten.",
-            fr: "Manchon droit à sertir, V-profil. Deux raccords pour assembler directement deux tuyaux. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM (LBP ou classique), -10°C à +110°C. Montage sans soudure."
+            cz: "Lisovací T-kus s závitovým vývodem, V-profil. Dva lisovací spoje 28 mm + odbočka G 1/2\" vnitřní závit. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. EPDM O-kroužek, -10 °C až +110 °C.",
+            en: "Press-fit tee 28×1/2×28, V-profile. Two 28mm press connections + G 1/2\" female thread branch. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. EPDM O-ring, -10°C to +110°C.",
+            de: "Pressfitting-T-Stück 28×1/2×28, V-Profil. Zwei 28-mm-Pressanschlüsse + G 1/2\" Innengewinde-Abzweig. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. EPDM-O-Ring, -10 °C bis +110 °C.",
+            fr: "Té 28×1/2×28 à sertir, V-profil. Deux raccords à sertir 28 mm + sortie filetée femelle G 1/2\". Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. O-ring EPDM, -10°C à +110°C."
         },
-        category: "manchons", diameter: "26mm", price: 5.40, image: "images/coupling.png"
-    },
-    {
-        id: 14,
-        name: { cz: "Lisovací spojka", en: "Press-fit coupling", de: "Pressfitting-Muffe", fr: "Manchon à sertir" },
-        description: {
-            cz: "Přímá lisovací spojka, V-profil. Dva lisovací spoje pro přímé spojení dvou trubek. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek (LBP nebo klasický), -10 °C až +110 °C. Montáž bez pájení.",
-            en: "Straight press-fit coupling, V-profile. Two press connections for directly joining two pipes. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring (LBP or traditional), -10°C to +110°C. Installation without soldering.",
-            de: "Gerade Pressfitting-Muffe, V-Profil. Zwei Pressverbindungen zum direkten Verbinden zweier Rohre. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring (LBP oder klassisch), -10 °C bis +110 °C. Montage ohne Löten.",
-            fr: "Manchon droit à sertir, V-profil. Deux raccords pour assembler directement deux tuyaux. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM (LBP ou classique), -10°C à +110°C. Montage sans soudure."
-        },
-        category: "manchons", diameter: "32mm", price: 7.80, image: "images/coupling.png"
+        category: "tes", diameter: "28×1/2×28mm", price: 3.80, image: "images/t-female-thread.png"
     },
 
-    // ── Adaptors / Přechodky / Übergangsstücke / Adaptateurs ─────────────────
+    // ── Přechodky & Raccords / Adaptors ──────────────────────────────────────
     {
-        id: 21,
-        name: { cz: "Lisovací přechodka s vnějším závitem", en: "Press-fit adaptor with male thread", de: "Pressfitting-Übergangsstück mit Außengewinde", fr: "Adaptateur à sertir avec filetage mâle" },
+        id: 14,
+        name: { cz: "Lisovací přípojka dvoudílná 28×1\" vnitřní závit", en: "2-piece press-fit connector 28×1\" female thread", de: "2-teilige Pressverbindung 28×1\" IG", fr: "Raccord 2 pièces 28×1\"F à sertir" },
         description: {
-            cz: "Lisovací přechodka s vnějším závitem, V-profil. Lisovací spoj + vnější závit (G 3/4\"). Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Těsnění: EPDM O-kroužek (LBP nebo klasický), -10 °C až +110 °C. Pro propojení lisovacích trubek se závitovými ventily nebo kotlovými hrdly.",
-            en: "Press-fit adaptor with male thread, V-profile. Press connection + male thread (G 3/4\"). Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Seal: EPDM O-ring (LBP or traditional), -10°C to +110°C. For connecting press-fit pipes to threaded valves or boiler connections.",
-            de: "Pressfitting-Übergangsstück mit Außengewinde, V-Profil. Pressverbindung + Außengewinde (G 3/4\"). Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Dichtung: EPDM-O-Ring (LBP oder klassisch), -10 °C bis +110 °C. Für die Verbindung von Pressfitting-Rohren mit Gewinde-Armaturen oder Kesselstutzen.",
-            fr: "Adaptateur à sertir avec filetage mâle, V-profil. Raccord à sertir + filetage mâle (G 3/4\"). Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Joint : O-ring EPDM (LBP ou classique), -10°C à +110°C. Pour relier des tubes à sertir à des vannes filetées ou raccords de chaudière."
+            cz: "Dvoudílná lisovací přípojka s vnitřním závitem G 1\" a plochým těsněním, V-profil. Lisovací spoj 28 mm + vnitřní závit G 1\". Snímatelná pro servis. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. EPDM, -10 °C až +110 °C.",
+            en: "2-piece press-fit connector with G 1\" female thread and flat seal, V-profile. 28mm press connection + G 1\" female thread. Removable for maintenance. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. EPDM, -10°C to +110°C.",
+            de: "2-teilige Pressverbindung mit G 1\" Innengewinde und Flachdichtung, V-Profil. 28-mm-Pressanschluss + G 1\" Innengewinde. Lösbar für Wartungsarbeiten. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. EPDM, -10 °C bis +110 °C.",
+            fr: "Raccord 2 pièces à sertir avec filetage femelle G 1\" et joint plat, V-profil. Raccord à sertir 28 mm + filetage femelle G 1\". Démontable pour maintenance. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. EPDM, -10°C à +110°C."
         },
-        category: "adaptors", diameter: "22mm × 3/4\"", price: 5.90, image: "images/adaptor-male.png"
+        category: "adaptors", diameter: "28mm × 1\"", price: 4.61, image: "images/adaptor-union.png"
     },
     {
-        id: 22,
-        name: { cz: "Lisovací přechodka s vnitřním závitem (monoblok)", en: "Press-fit adaptor with female thread (one piece)", de: "Pressfitting-Übergangsstück mit Innengewinde (einteilig)", fr: "Adaptateur à sertir avec filetage femelle (monobloc)" },
+        id: 15,
+        name: { cz: "Lisovací přechod 28×1\" vnější závit", en: "Press-fit transition 28×1\" male thread", de: "Pressfitting-Übergang 28×1\" AG", fr: "Pièce de transition 28×1\" mâle à sertir" },
         description: {
-            cz: "Jednodílná lisovací přechodka s vnitřním závitem, V-profil. Monolitická konstrukce pro vyšší pevnost — lisovací spoj + vnitřní závit (G 3/4\"). Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. EPDM O-kroužek, -10 °C až +110 °C.",
-            en: "One-piece press-fit adaptor with female thread, V-profile. One-piece construction for higher strength — press connection + female thread (G 3/4\"). Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. EPDM O-ring, -10°C to +110°C.",
-            de: "Einteiliges Pressfitting-Übergangsstück mit Innengewinde, V-Profil. Einteilige Konstruktion für höhere Festigkeit — Pressverbindung + Innengewinde (G 3/4\"). Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. EPDM-O-Ring, -10 °C bis +110 °C.",
-            fr: "Adaptateur monobloc à sertir avec filetage femelle, V-profil. Construction monobloc pour une résistance accrue — raccord à sertir + filetage femelle (G 3/4\"). Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. O-ring EPDM, -10°C à +110°C."
+            cz: "Lisovací přechod s vnějším závitem G 1\", V-profil. Lisovací spoj 28 mm + vnější závit G 1\" pro přímé napojení na závitová hrdla kotlů nebo rozdělovačů. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. EPDM O-kroužek.",
+            en: "Press-fit transition with G 1\" male thread, V-profile. 28mm press connection + G 1\" male thread for direct connection to boiler or manifold outlets. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. EPDM O-ring.",
+            de: "Pressfitting-Übergang mit G 1\" Außengewinde, V-Profil. 28-mm-Pressanschluss + G 1\" Außengewinde für direkten Anschluss an Kessel- oder Verteilerstutzen. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. EPDM-O-Ring.",
+            fr: "Pièce de transition à sertir avec filetage mâle G 1\", V-profil. Raccord à sertir 28 mm + filetage mâle G 1\" pour connexion directe aux sorties de chaudière ou collecteur. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. O-ring EPDM."
         },
-        category: "adaptors", diameter: "22mm × 3/4\"", price: 6.50, image: "images/adaptor-female-onepiece.png"
+        category: "adaptors", diameter: "28mm × 1\"", price: 3.80, image: "images/adaptor-male.png"
     },
     {
-        id: 23,
-        name: { cz: "Lisovací přechodka s vnějším závitem (monoblok)", en: "Press-fit adaptor with male thread (one piece)", de: "Pressfitting-Übergangsstück mit Außengewinde (einteilig)", fr: "Adaptateur à sertir avec filetage mâle (monobloc)" },
+        id: 16,
+        name: { cz: "Lisovací přechod 28×1\" vnitřní závit", en: "Press-fit transition 28×1\" female thread", de: "Pressfitting-Übergang 28×1\" IG", fr: "Pièce de transition 28×1\" femelle à sertir" },
         description: {
-            cz: "Jednodílná lisovací přechodka s vnějším závitem, V-profil. Monolitická konstrukce — lisovací spoj + vnější závit (G 3/4\") pro přímé napojení na závitová hrdla kotlů nebo rozdělovačů. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. EPDM O-kroužek.",
-            en: "One-piece press-fit adaptor with male thread, V-profile. One-piece construction — press connection + male thread (G 3/4\") for direct connection to threaded boiler or manifold outlets. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. EPDM O-ring.",
-            de: "Einteiliges Pressfitting-Übergangsstück mit Außengewinde, V-Profil. Einteilige Konstruktion — Pressverbindung + Außengewinde (G 3/4\") für direkten Anschluss an Gewindestutzen von Kesseln oder Verteilern. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. EPDM-O-Ring.",
-            fr: "Adaptateur monobloc à sertir avec filetage mâle, V-profil. Construction monobloc — raccord à sertir + filetage mâle (G 3/4\") pour connexion directe aux sorties filetées de chaudières ou collecteurs. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. O-ring EPDM."
+            cz: "Lisovací přechod s vnitřním závitem G 1\", V-profil. Lisovací spoj 28 mm + vnitřní závit G 1\" pro napojení na závitové armatury. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. EPDM O-kroužek.",
+            en: "Press-fit transition with G 1\" female thread, V-profile. 28mm press connection + G 1\" female thread for connecting to threaded valves. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. EPDM O-ring.",
+            de: "Pressfitting-Übergang mit G 1\" Innengewinde, V-Profil. 28-mm-Pressanschluss + G 1\" Innengewinde für den Anschluss an Gewinde-Armaturen. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. EPDM-O-Ring.",
+            fr: "Pièce de transition à sertir avec filetage femelle G 1\", V-profil. Raccord à sertir 28 mm + filetage femelle G 1\" pour raccordement aux vannes filetées. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. O-ring EPDM."
         },
-        category: "adaptors", diameter: "22mm × 3/4\"", price: 6.50, image: "images/adaptor-male-onepiece.png"
+        category: "adaptors", diameter: "28mm × 1\"", price: 3.80, image: "images/adaptor-female-onepiece.png"
     },
     {
-        id: 24,
-        name: { cz: "Lisovací přechodka s přírubovou maticí (nerez, EPDM těsnění)", en: "Press-fit adaptor with union nut, stainless steel, EPDM flat seal", de: "Pressfitting-Übergangsverschraubung Edelstahl mit EPDM-Flachdichtung", fr: "Adaptateur à sertir avec raccord union inox et joint EPDM" },
+        id: 17,
+        name: { cz: "Lisovací přípojka dvoudílná 22×1\" vnitřní závit", en: "2-piece press-fit connector 22×1\" female thread", de: "2-teilige Pressverbindung 22×1\" IG", fr: "Raccord 2 pièces 22×1\"F à sertir" },
         description: {
-            cz: "Lisovací přechodka s nerezovou přírubovou maticí a EPDM plochým těsněním, V-profil. Lisovací spoj + přírubový spoj. Materiál tvarovky: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. Matice z nerezové oceli zaručuje korozivzdornost. Pro kotly, měřiče tepla nebo termostatické ventily.",
-            en: "Press-fit adaptor with stainless steel union nut and EPDM flat seal, V-profile. Press connection + union connection. Fitting material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. Stainless steel nut ensures corrosion resistance. For boilers, heat meters or thermostatic valves.",
-            de: "Pressfitting-Übergangsverschraubung mit Edelstahl-Überwurfmutter und EPDM-Flachdichtung, V-Profil. Pressverbindung + Verschraubung. Fittingmaterial: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. Edelstahlmutter gewährleistet Korrosionsbeständigkeit. Für Kessel, Wärmemengenzähler oder Thermostatventile.",
-            fr: "Adaptateur à sertir avec raccord union inox et joint plat EPDM, V-profil. Raccord à sertir + raccord union. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. Écrou inox résistant à la corrosion. Pour chaudières, compteurs de chaleur ou vannes thermostatiques."
+            cz: "Dvoudílná lisovací přípojka s vnitřním závitem G 1\" a plochým těsněním, V-profil. Lisovací spoj 22 mm + vnitřní závit G 1\". Snímatelná pro servis. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. EPDM, -10 °C až +110 °C.",
+            en: "2-piece press-fit connector with G 1\" female thread and flat seal, V-profile. 22mm press connection + G 1\" female thread. Removable for maintenance. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. EPDM, -10°C to +110°C.",
+            de: "2-teilige Pressverbindung mit G 1\" Innengewinde und Flachdichtung, V-Profil. 22-mm-Pressanschluss + G 1\" Innengewinde. Lösbar für Wartungsarbeiten. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. EPDM, -10 °C bis +110 °C.",
+            fr: "Raccord 2 pièces à sertir avec filetage femelle G 1\" et joint plat, V-profil. Raccord à sertir 22 mm + filetage femelle G 1\". Démontable pour maintenance. Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. EPDM, -10°C à +110°C."
         },
-        category: "adaptors", diameter: "22mm × 3/4\"", price: 8.90, image: "images/adaptor-union.png"
+        category: "adaptors", diameter: "22mm × 1\"", price: 4.61, image: "images/adaptor-union.png"
+    },
+    {
+        id: 18,
+        name: { cz: "Lisovací přechod 22×1\" vnější závit", en: "Press-fit transition 22×1\" male thread", de: "Pressfitting-Übergang 22×1\" AG", fr: "Pièce de transition 22×1\" mâle à sertir" },
+        description: {
+            cz: "Lisovací přechod s vnějším závitem G 1\", V-profil. Lisovací spoj 22 mm + vnější závit G 1\". Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. EPDM O-kroužek.",
+            en: "Press-fit transition with G 1\" male thread, V-profile. 22mm press connection + G 1\" male thread. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. EPDM O-ring.",
+            de: "Pressfitting-Übergang mit G 1\" Außengewinde, V-Profil. 22-mm-Pressanschluss + G 1\" Außengewinde. Material: Kohlenstoffstahl E195 n. 1.0034 (UNI EN 10305-3), Zinkbeschichtung ≥ 7,5 μm. EPDM-O-Ring.",
+            fr: "Pièce de transition à sertir avec filetage mâle G 1\", V-profil. Raccord à sertir 22 mm + filetage mâle G 1\". Matériau : acier carbone E195 n. 1.0034 (UNI EN 10305-3), galvanisé ≥ 7,5 μm. O-ring EPDM."
+        },
+        category: "adaptors", diameter: "22mm × 1\"", price: 3.80, image: "images/adaptor-male.png"
+    },
+
+    // ── Vannes / Kohouty / Valves ─────────────────────────────────────────────
+    {
+        id: 19,
+        name: { cz: "Lisovací kulový kohout", en: "Press-fit ball valve", de: "Pressfitting-Kugelhahn", fr: "Vanne à sertir" },
+        description: {
+            cz: "Lisovací kulový kohout 28 mm, V-profil. Oba konce lisovací — rychlá montáž bez pájení. Kulový uzávěr pro přímé uzavírání potrubního úseku. Materiál tělesa: uhlíková ocel, pozinkování. EPDM těsnění, -10 °C až +110 °C.",
+            en: "Press-fit ball valve 28mm, V-profile. Both ends press-fit for quick installation without soldering. Ball shut-off for direct isolation. Body: carbon steel, zinc coated. EPDM seal, -10°C to +110°C.",
+            de: "Pressfitting-Kugelhahn 28 mm, V-Profil. Beide Enden als Pressanschluss für schnelle Montage ohne Löten. Kugelabsperrung für direktes Absperren. Gehäuse: Kohlenstoffstahl, verzinkt. EPDM-Dichtung, -10 °C bis +110 °C.",
+            fr: "Vanne à sertir 28 mm, V-profil. Les deux extrémités à sertir pour une pose rapide sans soudure. Robinet à boisseau sphérique pour coupure directe. Corps : acier carbone zingué. Joint EPDM, -10°C à +110°C."
+        },
+        category: "vannes", diameter: "28mm", price: 14.04, image: null
     }
 ];
 

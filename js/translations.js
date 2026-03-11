@@ -76,6 +76,7 @@ const translations = {
         reducersDesc: "Všechny rozměry",
         adaptors: "Přechodky",
         adaptorsDesc: "S vnějším a vnitřním závitem",
+        valves: "Kohouty",
 
         // Products page
         ourProducts: "Naše produkty",
@@ -243,6 +244,7 @@ const translations = {
         reducersDesc: "All dimensions",
         adaptors: "Adaptors",
         adaptorsDesc: "Male and female thread",
+        valves: "Valves",
         ourProducts: "Our products",
         professionalQuality: "Professional quality press fittings",
         all: "All",
@@ -390,6 +392,7 @@ const translations = {
         reducersDesc: "Alle Abmessungen",
         adaptors: "Übergangsstücke",
         adaptorsDesc: "Außen- und Innengewinde",
+        valves: "Hähne",
         ourProducts: "Unsere Produkte",
         professionalQuality: "Pressfittings in Profiqualität",
         all: "Alle",
@@ -537,6 +540,7 @@ const translations = {
         reducersDesc: "Toutes dimensions",
         adaptors: "Adaptateurs",
         adaptorsDesc: "Filetage mâle et femelle",
+        valves: "Vannes",
         ourProducts: "Nos produits",
         professionalQuality: "Pièces à sertir de qualité professionnelle",
         all: "Tous",
@@ -689,10 +693,10 @@ const productNames = {
 
 // Category translations
 const categoryNames = {
-    cz: { coudes: "Kolena", tes: "T-kusy", manchons: "Spojky", reductions: "Redukce", adaptors: "Přechodky" },
-    en: { coudes: "Elbows", tes: "Tees", manchons: "Couplings", reductions: "Reducers", adaptors: "Adaptors" },
-    de: { coudes: "Bögen", tes: "T-Stücke", manchons: "Muffen", reductions: "Reduzierstücke", adaptors: "Übergangsstücke" },
-    fr: { coudes: "Coudes", tes: "Tés", manchons: "Manchons", reductions: "Réductions", adaptors: "Adaptateurs" }
+    cz: { coudes: "Kolena", tes: "T-kusy", manchons: "Spojky", reductions: "Redukce", adaptors: "Přechodky", vannes: "Kohouty" },
+    en: { coudes: "Elbows", tes: "Tees", manchons: "Couplings", reductions: "Reducers", adaptors: "Adaptors", vannes: "Valves" },
+    de: { coudes: "Bögen", tes: "T-Stücke", manchons: "Muffen", reductions: "Reduzierstücke", adaptors: "Übergangsstücke", vannes: "Hähne" },
+    fr: { coudes: "Coudes", tes: "Tés", manchons: "Manchons", reductions: "Réductions", adaptors: "Adaptateurs", vannes: "Vannes" }
 };
 
 // Get current language — default: Czech
