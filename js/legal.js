@@ -9,7 +9,7 @@ const legalContent = {
             updated: 'Platné od 1. 1. 2025',
             html: `
 <h2>1. Základní ustanovení</h2>
-<p>Tyto všeobecné obchodní podmínky (dále jen „VOP") upravují vztahy mezi prodávajícím a kupujícím v oblasti prodeje zboží prostřednictvím internetového obchodu <strong>www.navalo.eu</strong>.</p>
+<p>Tyto všeobecné obchodní podmínky (dále jen „VOP") upravují vztahy mezi prodávajícím a kupujícím v oblasti prodeje zboží prostřednictvím internetového obchodu <strong>eshop.navalo.eu</strong>.</p>
 <p><strong>Prodávající:</strong> Navalo s.r.o., IČO: 25352695, DIČ: CZ25352695, se sídlem Radvanická 140/60, 115 00 Michálkovice, Česká republika. E-mail: <a href="mailto:fh@navalo.eu">fh@navalo.eu</a>, tel.: +420 603 41 48 11.</p>
 <p><strong>Kupující</strong> je fyzická nebo právnická osoba, která uzavírá kupní smlouvu s prodávajícím prostřednictvím e-shopu.</p>
 
@@ -74,7 +74,7 @@ const legalContent = {
             updated: 'Effective from 1 January 2025',
             html: `
 <h2>1. General Provisions</h2>
-<p>These General Terms and Conditions ("GTC") govern the relationship between the seller and the buyer in the sale of goods through the online store <strong>www.navalo.eu</strong>.</p>
+<p>These General Terms and Conditions ("GTC") govern the relationship between the seller and the buyer in the sale of goods through the online store <strong>eshop.navalo.eu</strong>.</p>
 <p><strong>Seller:</strong> Navalo s.r.o., Company ID: 25352695, VAT: CZ25352695, registered at Radvanická 140/60, 115 00 Michálkovice, Czech Republic. E-mail: <a href="mailto:fh@navalo.eu">fh@navalo.eu</a>, tel.: +420 603 41 48 11.</p>
 <p><strong>Buyer</strong> means any natural or legal person entering into a purchase agreement with the seller through the online store.</p>
 
@@ -139,7 +139,7 @@ const legalContent = {
             updated: 'Gültig ab 1. Januar 2025',
             html: `
 <h2>1. Allgemeine Bestimmungen</h2>
-<p>Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Beziehung zwischen dem Verkäufer und dem Käufer beim Kauf von Waren über den Online-Shop <strong>www.navalo.eu</strong>.</p>
+<p>Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Beziehung zwischen dem Verkäufer und dem Käufer beim Kauf von Waren über den Online-Shop <strong>eshop.navalo.eu</strong>.</p>
 <p><strong>Verkäufer:</strong> Navalo s.r.o., Unternehmens-Nr.: 25352695, USt-IdNr.: CZ25352695, Sitz: Radvanická 140/60, 115 00 Michálkovice, Tschechische Republik. E-Mail: <a href="mailto:fh@navalo.eu">fh@navalo.eu</a>, Tel.: +420 603 41 48 11.</p>
 <p><strong>Käufer</strong> ist jede natürliche oder juristische Person, die mit dem Verkäufer einen Kaufvertrag über den Online-Shop abschließt.</p>
 
@@ -204,7 +204,7 @@ const legalContent = {
             updated: 'En vigueur à partir du 1er janvier 2025',
             html: `
 <h2>1. Dispositions générales</h2>
-<p>Les présentes Conditions Générales de Vente (CGV) régissent les relations entre le vendeur et l'acheteur dans le cadre de la vente de produits via la boutique en ligne <strong>www.navalo.eu</strong>.</p>
+<p>Les présentes Conditions Générales de Vente (CGV) régissent les relations entre le vendeur et l'acheteur dans le cadre de la vente de produits via la boutique en ligne <strong>eshop.navalo.eu</strong>.</p>
 <p><strong>Vendeur :</strong> Navalo s.r.o., N° d'entreprise : 25352695, TVA : CZ25352695, siège social : Radvanická 140/60, 115 00 Michálkovice, République tchèque. E-mail : <a href="mailto:fh@navalo.eu">fh@navalo.eu</a>, tél. : +420 603 41 48 11.</p>
 <p><strong>Acheteur</strong> désigne toute personne physique ou morale concluant un contrat d'achat avec le vendeur via la boutique en ligne.</p>
 
