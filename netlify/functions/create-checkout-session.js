@@ -38,8 +38,8 @@ exports.handler = async (event) => {
             line_items: lineItems,
             mode: 'payment',
             customer_email: customerEmail,
-            success_url: 'https://navalo.netlify.app/success.html?session_id={CHECKOUT_SESSION_ID}',
-            cancel_url: 'https://navalo.netlify.app/checkout.html',
+            success_url: 'https://eshop.navalo.eu/success.html?session_id={CHECKOUT_SESSION_ID}',
+            cancel_url: 'https://eshop.navalo.eu/checkout.html',
             metadata: { customerName },
         });
 
