@@ -137,7 +137,7 @@ const products = [
     },
     {
         id: 12,
-        name: { cz: "T-kus 28×15×28", en: "Reducing tee 28×15×28", de: "T-Stück 28×15×28", fr: "Té 28×15×28" },
+        name: { cz: "T-kus redukovaný", en: "Reducing tee", de: "Reduzier-T-Stück", fr: "Té réduit" },
         description: {
             cz: "Redukovaný lisovací T-kus 28×15×28, V-profil. Průchozí větev 28 mm + redukovaná odbočka 15 mm. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. EPDM O-kroužek, -10 °C až +110 °C.",
             en: "Press-fit reducing tee 28×15×28, V-profile. 28mm main run + 15mm reduced branch. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. EPDM O-ring, -10°C to +110°C.",
@@ -148,7 +148,7 @@ const products = [
     },
     {
         id: 13,
-        name: { cz: "T-kus 28×½×28", en: "Tee 28×½×28", de: "T-Stück 28×½×28", fr: "Té 28×½×28" },
+        name: { cz: "T-kus se závitem", en: "Tee with thread", de: "T-Stück mit Gewinde", fr: "Té fileté" },
         description: {
             cz: "Lisovací T-kus s závitovým vývodem, V-profil. Dva lisovací spoje 28 mm + odbočka G 1/2\" vnitřní závit. Materiál: uhlíková ocel E195 č. 1.0034 (UNI EN 10305-3), pozinkování ≥ 7,5 μm. EPDM O-kroužek, -10 °C až +110 °C.",
             en: "Press-fit tee with threaded branch, V-profile. Two 28mm press connections + G 1/2\" female thread branch. Material: carbon steel E195 n. 1.0034 (UNI EN 10305-3), zinc coated ≥ 7.5 μm. EPDM O-ring, -10°C to +110°C.",
