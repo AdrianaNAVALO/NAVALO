@@ -4,4 +4,4 @@ Disallow: /cart.html
 Disallow: /checkout.html
 Disallow: /success.html
 
-Sitemap: https://navalo.eu/sitemap.xml
+Sitemap: https://eshop.navalo.eu/sitemap.xml
