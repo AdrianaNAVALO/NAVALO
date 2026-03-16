@@ -23,7 +23,7 @@ const legalContent = {
 
 <h2>3. Cena zboží a platební podmínky</h2>
 <ol>
-<li>Ceny zboží jsou uvedeny včetně DPH dle platné legislativy země kupujícího.</li>
+<li>Ceny zboží jsou uvedeny bez DPH. DPH je účtováno dle sazby platné v zemi kupujícího.</li>
 <li>Prodávající si vyhrazuje právo na změnu cen. Cena platná v okamžiku odeslání objednávky je závazná.</li>
 <li>Kupující hradí objednávku platební kartou, bankovním převodem nebo dobírkou.</li>
 <li>Zboží je odesláno až po připsání platby na účet prodávajícího (u bankovního převodu).</li>
@@ -88,7 +88,7 @@ const legalContent = {
 
 <h2>3. Prices and Payment</h2>
 <ol>
-<li>Prices include VAT in accordance with the applicable legislation of the buyer's country.</li>
+<li>Prices are shown excluding VAT. VAT is applied according to the rate applicable in the buyer's country.</li>
 <li>The seller reserves the right to change prices. The price valid at the time of order submission is binding.</li>
 <li>Payment can be made by credit/debit card, bank transfer, or cash on delivery.</li>
 <li>Goods are dispatched after payment is received (for bank transfers).</li>
@@ -153,7 +153,7 @@ const legalContent = {
 
 <h2>3. Preise und Zahlungsbedingungen</h2>
 <ol>
-<li>Die Preise verstehen sich inklusive der gesetzlichen Mehrwertsteuer des Käuferlandes.</li>
+<li>Die Preise verstehen sich exklusive der gesetzlichen Mehrwertsteuer. Die MwSt. wird gemäß dem im Käuferland geltenden Satz berechnet.</li>
 <li>Der Verkäufer behält sich das Recht auf Preisänderungen vor. Der zum Zeitpunkt der Bestellung gültige Preis ist verbindlich.</li>
 <li>Die Zahlung erfolgt per Kreditkarte, Banküberweisung oder Nachnahme.</li>
 <li>Bei Banküberweisung wird die Ware erst nach Zahlungseingang versandt.</li>
@@ -218,7 +218,7 @@ const legalContent = {
 
 <h2>3. Prix et conditions de paiement</h2>
 <ol>
-<li>Les prix incluent la TVA applicable dans le pays de l'acheteur.</li>
+<li>Les prix sont indiqués hors TVA. La TVA est appliquée selon le taux en vigueur dans le pays de l'acheteur.</li>
 <li>Le vendeur se réserve le droit de modifier les prix. Le prix en vigueur au moment de la commande est contractuel.</li>
 <li>Le paiement s'effectue par carte bancaire, virement ou contre remboursement.</li>
 <li>En cas de virement bancaire, l'expédition n'intervient qu'après réception du paiement.</li>

@@ -155,11 +155,12 @@ async function sendOrderEmails(orderData) {
     const L = emailLang[lang] || emailLang.cz;
 
     const orderRef = generateOrderReference();
-    const { subtotal, shipping, total } = getCartTotals();
+    const { subtotal, shipping } = getCartTotals();
     const countryCode = document.getElementById('country')?.value || 'CZ';
     const vatRate = typeof getVatRate === 'function' ? getVatRate(countryCode) : 21;
-    const vatAmount = (subtotal * vatRate) / (100 + vatRate);
-    const subtotalExcl = subtotal - vatAmount;
+    const vatAmount = subtotal * vatRate / 100;
+    const subtotalExcl = subtotal;
+    const total = subtotal + vatAmount + shipping;
 
     const orderDate = new Date().toLocaleDateString('cs-CZ', {
         year: 'numeric', month: 'long', day: 'numeric',

@@ -231,9 +231,8 @@ function updateOrderSummary() {
     const codSurcharge = window.codSurcharge ?? 0;
     const countryCode = document.getElementById('country')?.value || 'CZ';
     const vatRate = window.getVatRate ? window.getVatRate(countryCode) : 21;
-    const vatAmount = (subtotal * vatRate) / (100 + vatRate);
-    const subtotalExclVat = subtotal - vatAmount;
-    const total = subtotal + shipping + codSurcharge;
+    const vatAmount = subtotal * vatRate / 100;
+    const total = subtotal + vatAmount + shipping + codSurcharge;
 
     const orderSubtotal = document.getElementById('order-subtotal');
     const orderVat = document.getElementById('order-vat');
@@ -243,7 +242,7 @@ function updateOrderSummary() {
     const orderCod = document.getElementById('order-cod');
     const orderTotal = document.getElementById('order-total');
 
-    if (orderSubtotal) orderSubtotal.textContent = formatPrice(subtotalExclVat);
+    if (orderSubtotal) orderSubtotal.textContent = formatPrice(subtotal);
     if (orderVat) orderVat.textContent = formatPrice(vatAmount);
     if (vatLabel) vatLabel.textContent = `${t('vat')} (${vatRate}%)`;
     if (orderShipping) orderShipping.textContent = shipping === 0 ? (t('freeShipping') || 'Zdarma') : formatPrice(shipping);
@@ -356,11 +355,19 @@ async function handleCheckoutSubmit(e) {
             // Save order data so success.html can send the confirmation email after Stripe redirect
             localStorage.setItem('navalo_pending_order', JSON.stringify(orderData));
 
+            // Send VAT-inclusive prices to Stripe
+            const countryCode = orderData.country || 'CZ';
+            const vatRate = window.getVatRate ? window.getVatRate(countryCode) : 21;
+            const itemsForStripe = window.cart.map(item => ({
+                ...item,
+                price: Math.round(item.price * (1 + vatRate / 100) * 100) / 100
+            }));
+
             const response = await fetch('/.netlify/functions/create-checkout-session', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    items: window.cart,
+                    items: itemsForStripe,
                     shippingCost: window.selectedShipping ?? 0,
                     customerEmail: orderData.email,
                     customerName: `${orderData.firstName} ${orderData.lastName}`,

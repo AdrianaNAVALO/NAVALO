@@ -277,7 +277,7 @@ function renderProducts(productList, containerId = 'products-grid') {
                 <h3>${getProductName(product)}</h3>
                 <p class="category">${getCategoryNameTranslated(product.category)}</p>
                 <p class="diameter">Ø ${product.diameter}</p>
-                <p class="price">${formatPrice(product.price)} <small>${t('inclVat')}</small></p>
+                <p class="price">${formatPrice(product.price)} <small>${t('exclVat')}</small></p>
                 <div class="product-actions">
                     <button class="btn btn-primary btn-small" onclick="event.stopPropagation(); addToCart(${product.id})">
                         ${t('addToCart')}
