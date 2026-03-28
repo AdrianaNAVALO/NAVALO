@@ -347,6 +347,7 @@ async function handleCheckoutSubmit(e) {
         billingCountry: formData.get('billingCountry'),
         items: window.cart,
         shippingMethodId: document.querySelector('input[name="shippingMethod"]:checked')?.value || '',
+        paymentMethod,
         totals: window.getCartTotals()
     };
 

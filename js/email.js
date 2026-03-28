@@ -121,6 +121,22 @@ function buildClientEmailBody(lang, name, ref, date, items, subtotal, vatRate, v
 }
 
 // Build admin email body (always Czech)
+const paymentMethodLabels = {
+    card:            'Platební karta (Stripe)',
+    bank_transfer:   'Bankovní převod',
+    cod:             'Dobírka',
+    personal_pickup: 'Osobní odběr'
+};
+
+const shippingMethodLabels = {
+    personal_pickup: 'Osobní odběr',
+    ppl:             'PPL',
+    dpd:             'DPD',
+    zasilkovna:      'Zásilkovna',
+    gls:             'GLS',
+    free:            'Doprava zdarma'
+};
+
 function buildAdminEmailBody(d) {
     return [
         `NOVÁ OBJEDNÁVKA: ${d.ref}`,
@@ -130,6 +146,9 @@ function buildAdminEmailBody(d) {
         `Email: ${d.email}`,
         `Telefon: ${d.phone}`,
         d.company !== '-' ? `Firma: ${d.company} | IČO: ${d.ico}` : '',
+        '',
+        `ZPŮSOB PLATBY: ${paymentMethodLabels[d.paymentMethod] || d.paymentMethod || '-'}`,
+        `ZPŮSOB DOPRAVY: ${shippingMethodLabels[d.shippingMethodId] || d.shippingMethodId || '-'}`,
         '',
         'POLOŽKY:',
         d.items,
@@ -194,6 +213,8 @@ async function sendOrderEmails(orderData) {
             name: customerName, type: orderData.customerType === 'company' ? 'Firma' : 'Soukromá osoba',
             email: orderData.email, phone: orderData.phone,
             company: orderData.companyName || '-', ico: orderData.ico || '-',
+            paymentMethod: orderData.paymentMethod,
+            shippingMethodId: orderData.shippingMethodId,
             items,
             subtotal: formatPrice(subtotalExcl), vatRate, vatAmount: formatPrice(vatAmount),
             shipping: formatPrice(shipping), total: formatPrice(total),
